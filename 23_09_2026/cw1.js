@@ -2,7 +2,7 @@
 Zadanie 1
 Napisz skrypt, który losuje liczbę całkowitą z danego zakresu wartości, wypisuje ją na ekran oraz wypisuje informację o parzystości tej liczby i jej znaku (dodatnia, ujemna, zero).
 Jeśli będzie to liczba parzysta, to po kilku wolnych liniach wypisze poziomo czytelnie n kolejnych parzystych rosnąco, w przeciwnym razie w ten sam sposób wypisze n kolejnych malejąco (w obu przypadkach zaczynamy wypisywanie od liczby wylosowanej).
-Zakres losowania i wartość n zdeklaruj jako stałe. Przetestuj skrypt dla różnych wartości stałych.
+Zakres losowania i wartość n zdeklaruj jako stałe. Przetestuj skrypt dla różnych wartości stałych. */
 
 let pocz=-20, kon=20, n=10;
 let x;
@@ -30,8 +30,4 @@ if(x%2==0){
     document.write(x-(2*i) + " ")
 }
 
-Zadanie 2
-Napisz skrypt, który losuje liczbę całkowitą z danego zakresu wartości dotąd, aż wylosuje liczbę podzielną przez k. Skrypt wszystkie wylosowane wartości wypisuje poziomo czytelnie na ekran. Po zakończeniu losowania wypisuje komunikat o liczbie wylosowanych liczb. W nagrodę:
-wyświetla w oknie przeglądarki tyle rzędów gwiazdek po n gwiazdek w każdym, ile było wylosowanych liczb (n zdeklaruj jako stałą, np. const n=20)
-Zakres losowania i wartość k zdeklaruj jako stałe. Przetestuj skrypt dla różnych wartości stałych. */
 
