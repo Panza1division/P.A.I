@@ -6,7 +6,12 @@ const n=20;
 let licznik=0;
 let x;
 for(i=0; i<n; i++){
-    x=Math.floor(Math.random())
-    document.write(x)
-    
+    x=Math.floor(Math.random() * 2);
+    document.write(x + " ");
+
+     if (x === 1) {
+        licznik++;
+    }
 }
+document.write("<br><br>");
+document.write("Liczba wylosowanych jedynek: " + licznik);
