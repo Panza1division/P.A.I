@@ -1,31 +1,52 @@
-/*let licznik = 1
+/*ZAD1
+
+let licznik=0, a
 do{
-    do{
-        a=prompt("Napisz liczbę nieujemną:"+ "");
-    }while(isNaN(a))
+    a=parseInt(prompt("Napisz liczbę nieujemną:"+ ""));
     licznik++
-}while(a<0)
-parseFloat(a)
-document.write("Wypisana liczba to: " +a+ "</br>Ilość błędnych liczb: " +licznik)
-let a
+}while(a<0||isNaN(a))
+a=parseInt(a);
+licznik--;
+alert("Wypisana liczba to: " +a+ "\n Ilość błędnych liczb: " +licznik)*/
+
+
+/*ZAD2
+
+let a, napis="";
+do{
+    a=parseInt(prompt("Wprowadź liczbę dodatnią i parzystą"+""));
+    if(isNaN(a)||a<=-0||a%2!=0){
+        napis+=a+", ";
+    }
+}while(isNaN(a)||a<=-0||a%2!=0);
+alert("Podana liczba to "+a+ "\n Złe wartosći: " +napis) */
+
+/*ZAD3
+const a=10, b=20;
+let liczba;
+do{
+    liczba=parseInt(prompt("Wprowadź liczbe z zakresu ["+a+","+b+"]"));
+}while(isNaN(liczba)||liczba<a||liczba>b);
+if(a%2==0){
+    parzystosc="parzysta"
+}else{
+    parzystosc="nieparzysta"
+}
+*/
+
+
+/*let a
 do{
      a=parseInt(promt("Podaj liczbę: "));
 }while(isNaN(a));
-alert(a);*/
+alert(a);
 
-/*let im;
+let im;
 do{
     im=promt("Podaj Imię: ");
-} while(!isNaN(im)); 
-alert(im)*/
-
-alert("ok")
-
-
-
-
-
-
+} while(!isNaN(im));
+alert(im)
+*/
 /*    1. Wyegzekwuj wprowadzenie przez użytkownika liczby nieujemnej. Wypisz w kolejnym oknie dialogowym tę dobrą wartość i komunikat o ilości podanych złych wartości.
 
     2. Wyegzekwuj wprowadzenie przez użytkownika liczby dodatniej i parzystej. Wypisz w kolejnym oknie dialogowym tę dobrą wartość i komunikat wyświetlający wszystkie wprowadzone złe wartości.
