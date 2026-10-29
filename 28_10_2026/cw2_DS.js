@@ -2,30 +2,34 @@
 Zadeklaruj dwie stałe o wartościach -50 i 50 oraz zmienną n o dowolnej wartości. Wylosuj do tablicy o nazwie losowe1 n wartości z powyższego zakresu. Wyświetl poziomo czytelnie zawartość tablicy za pomocą instrukcji iteracyjnej. Wyświetl poziomo czytelnie liczby nieparzyste z tej tablicy i komunikat o ilości liczb nieparzystych.  Wyświetl poziomo czytelnie liczby ujemne z tej tablicy oraz komunikat o sumie liczb ujemnych.
 */
 
-const a=-50, b=50;
-let n=20, liczba, losowanie1=[], niepa, ilosc=0,suma=0;
+const a = -50;
+const b = 50;
+const n = 20;
+const losowe1 = [];
+const nieparzyste = [];
+const ujemne = [];
+let sumaUjemnych = 0;
 
-for(let i=0;i<=n;i++){
-    let x = Math.floor(Math.random()*(b-a+1)+a);
-    losowanie1.push(x);
+for (let i = 0; i < n; i++) {
+    losowe1.push(Math.floor(Math.random() * (b - a + 1)) + a);
 }
 
-document.write(losowanie1 + "</br>")
+document.write("Wylosowane liczby: " + losowe1.join("; ") + "<br>");
 
-
-for(let niepa of losowanie1){
-    if(niepa%2!==0){
-        document.write(niepa + ", ");
-        ilosc++
+for (const liczba of losowe1) {
+    if (liczba % 2 !== 0) {
+        nieparzyste.push(liczba);
     }
 }
-document.write("<br>Ilosc iczb nieparszystych: "+ilosc+"<br><br>");
+document.write("Liczby nieparzyste: " + nieparzyste.join("; ") + "<br>");
+document.write("Ilość liczb nieparzystych: " + nieparzyste.length + "<br>");
 
-for(let index in losowanie1){
-    if(losowanie1[index]<0){
-        suma+=losowanie1[index];
-        document.write(losowanie1[index]+" ");
+for (const liczba of losowe1) {
+    if (liczba < 0) {
+        ujemne.push(liczba);
+        sumaUjemnych += liczba;
     }
 }
 
-document.write("<br>Suma liczb umejnych: "+suma)
+document.write("Liczby ujemne: " + ujemne.join("; ") + "<br>");
+document.write("Suma liczb ujemnych: " + sumaUjemnych);

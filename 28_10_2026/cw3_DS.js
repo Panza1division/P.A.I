@@ -2,22 +2,22 @@
 
 
 
-const a=-100, b=30;
-let n, p
+const a = -100;
+const b = 30;
+let n;
 
-do{
-    let losowe2 = [];
-    do{
-        n=Math.floor(Math.random()*(b-a+1)+a);
-    }while(n<=0);
+do {
+    n = Math.floor(Math.random() * b) + 1;
+    const losowe2 = [];
 
-for(let i=0;i<n;i++){
-    do{
-        p=Math.floor(Math.random()*(b-a+1)+b);
-    }while(p%2!=0);
-    losowe2.push(p);
-}
+    for (let i = 0; i < n; i++) {
+        let liczba;
+        do {
+            liczba = Math.floor(Math.random() * (b - a + 1)) + a;
+        } while (liczba % 2 !== 0);
+        losowe2.push(liczba);
+    }
 
-alert("Zawartość tablicy: "+losowe2.join("; "));
+    alert("Zawartość tablicy: " + losowe2.join(";  "));
 
-}while(confirm("powtrzóżyć zabawę?"))
+} while (confirm("Czy powtórzyć zabawę?"));

@@ -1,5 +1,23 @@
-/* Napisz  skrypt, w którym utworzysz tablicę z imionami kolegów (minimum 5 imion). Nazwa tablicy imiona. Wyświetl w oknie przeglądarki informacje o ilości imion w twojej tablicy (korzystając z odpowiedniej własności dla obiektu tablicowego). Wyświetl zawartość tej tablicy poziomo czytelnie na różne sposoby: (każde wyświetlenie od nowego wiersza)
-1. Korzystając z odpowiedniej metody łączenia elementów tablicy dla obiektu imiona (separator imion to średnik i spacja)
-2. Korzystając z pętli for in
-3. Korzystając z pętli for of 
-4. Korzystając z pętli for  */
+const imiona = ["Alicja", "Bartek", "Celina", "Dawid", "Ewa"];
+
+document.write("Liczba imion: " + imiona.length + "<br>");
+document.write("Metoda join: " + imiona.join("; ") + "<br>");
+
+document.write("Pętla for in: ");
+for (const indeks in imiona) {
+	document.write(imiona[indeks] + (indeks < imiona.length - 1 ? "; " : ""));
+}
+document.write("<br>");
+
+document.write("Pętla for of: ");
+let pierwszy = true;
+for (const imie of imiona) {
+	document.write((pierwszy ? "" : "; ") + imie);
+	pierwszy = false;
+}
+document.write("<br>");
+
+document.write("Pętla for: ");
+for (let indeks = 0; indeks < imiona.length; indeks++) {
+	document.write(imiona[indeks] + (indeks < imiona.length - 1 ? "; " : ""));
+}
