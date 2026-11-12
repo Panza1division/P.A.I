@@ -1,0 +1,17 @@
+const uczen = {
+    imie: "Anna",
+    nazwisko: "Nowak",
+    wiek: 17,
+    klasa: "3A"
+};
+
+for (let klucz in uczen) {
+   document.write("<br>"+klucz + ": " + uczen[klucz]);
+}
+
+
+------------------
+const uczen = {imie: "Anna", nazwisko: "Nowak",wiek: 17, klasa: "3A"};
+for (let klucz in uczen) {
+   document.write("<br>"+klucz + ": " + uczen[klucz]);
+}
